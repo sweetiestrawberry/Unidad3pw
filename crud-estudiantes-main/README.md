@@ -59,100 +59,92 @@ Carrera Eliminada
 
 ### 🔗 Enlaces del proyecto
 
-* **Repositorio en GitHub:** [[Repositorio en GitHub](https://github.com/Yuki-23151302/crud-estudiantes.git)]
+* **Repositorio en GitHub:** https://github.com/sweetiestrawberry/Unidad3pw
 
 ---
 
 ## 🧠 Proceso de desarrollo
 
 ### 🛠️ Tecnologías utilizadas
-
+ *MySQL (XAMPP)  
+* Tailwind CSS  
+* Blade
+* HTML5  
 * Laravel 12  
 * PHP 8.2  
-* MySQL (XAMPP)  
-* Tailwind CSS  
-* Blade (motor de plantillas)  
-* HTML5  
+* VIsual
 
 ---
 
 ## ⚙️ Funcionamiento del sistema
 
-El sistema permite gestionar **Estudiantes** y **Carreras** mediante las operaciones CRUD.
+Ahora nos toco hacer esta página web funciona como una herramienta de administración académica que facilita el control, organización y actualización de datos de estudiantes y carreras de forma eficiente..incluye formularios para capturar datos, tablas para mostrar la información almacenada y botones para ejecutar cada una de las operaciones CRUD
 
 ### 🟢 Crear (Create)
 
-**Estudiantes:**  
+ 
+
+**Carreras:**  
+Formulario para registrar:  
+* Nombre
+* **Estudiantes:**  
 Formulario para registrar:  
 * Nombre  
 * Correo electrónico  
 * Carrera  
-* Semestre  
+* Semestre 
+  
 
-**Carreras:**  
-Formulario para registrar:  
-* Nombre  
-
-> Ambos formularios validan los datos antes de guardarlos en la base de datos y muestran mensajes de éxito:  
-> - “Estudiante registrado exitosamente”  
-> - “Carrera registrada exitosamente”
+"Ambas interfaces ejecutan una verificación de integridad de los datos previo a su almacenamiento. Una vez confirmada la operación en la base de datos, el sistema despliega notificaciones de confirmación: 'Registro de estudiante completado con éxito' o 'Alta de carrera procesada correctamente'."
 
 ---
 
-### 📋 Leer (Read)
+### Leer
 
-**Estudiantes:**  
-Se muestra una tabla con todos los estudiantes registrados:  
+**Estudiantes:**  ![Tabla Carreras](image-15.png)
+ Tabla con todos los estudiantes registrados:  
 * Número (numeración visual)  
 * Nombre  
 * Correo  
 * Carrera  
 * Semestre  
 
-**Carreras:**  
-Se muestra una tabla con todas las carreras registradas:  
+Carreras ![Tabla Estudiantes](image-14.png)
+
+ tabla con todas las carreras registradas:  
 * Número  
 * Nombre  
 
 ---
 
-### ✏️ Actualizar (Update)
+ (Update)
 
-Se pueden editar los datos de estudiantes y carreras desde un formulario:  
-* Se cargan los datos actuales  
-* Se pueden modificar  
-* Al guardar, se muestran mensajes de éxito:  
-> - “Estudiante actualizado exitosamente”  
-> - “Carrera actualizada exitosamente”
+
+🗑️ Eliminación de registros
+
+El sistema permite borrar información directamente desde la tabla de datos:
+
+Se puede seleccionar el elemento que se desea eliminar
+Al realizar la acción, el registro desaparece del sistema
+Se muestran notificaciones para confirmar la operación, por ejemplo:
+“Registro de estudiante eliminado correctamente”
+“Registro de carrera eliminado correctamente”
+🔢 Consideración sobre la numeración en pantalla
+
+La numeración que aparece en las tablas cumple únicamente una función visual:
+
+Se presenta de forma ordenada y continua (1, 2, 3, …)
+Se ajusta automáticamente cuando se elimina algún registro
+No representa el identificador real almacenado en la base de datos
+
+El identificador original permanece intacto, ya que corresponde a la clave primaria, lo cual garantiza la correcta gestión y consistencia de la información dentro del sistema.
+---
+
+
 
 ---
 
-### ❌ Eliminar (Delete)
-
-Se pueden eliminar registros desde la tabla:  
-* Se elimina el registro seleccionado  
-* Se muestran mensajes de éxito:  
-> - “Estudiante eliminado exitosamente”  
-> - “Carrera eliminada exitosamente”  
-
----
-
-## ⚠️ Nota importante sobre numeración visual
-
-La numeración en las tablas es **visual y dinámica**:
-
-* ✔ Se muestra consecutivamente (1, 2, 3…)  
-* ✔ Se actualiza al eliminar registros  
-* ❌ No corresponde al ID real en la base de datos  
-
-El ID original **no se modifica**, ya que es la clave primaria y asegura la integridad de los datos.
-
-![Tabla Estudiantes](image-14.png)
-![Tabla Carreras](image-15.png)
-
----
-
-## 🧱 Estructura del proyecto
+  Estructura del proyecto
 
 ```bash
 crud-estudiantes/
@@ -195,26 +187,21 @@ crud-estudiantes/
 
 ---
 
-## 🧠 Lo que aprendí
+## Conocimientos adquiridos
 
-Durante el desarrollo de este proyecto reforcé mis conocimientos sobre el uso del framework Laravel y su arquitectura MVC. Aprendí a conectar modelos con la base de datos, crear controladores para manejar la lógica del sistema y desarrollar vistas dinámicas con Blade.
+A lo largo del desarrollo de este proyecto fortalecí mis habilidades en el uso del framework Laravel, especialmente entendiendo mejor su estructura basada en el modelo MVC. Pude trabajar con modelos para interactuar con la base de datos, controladores para gestionar la lógica de la aplicación y vistas dinámicas utilizando Blade.Aun que como formatee la compu tuve que volver a instalar todo , casi lloro la vrdd , desde instalar visual hasta lo recien visto 
+También puse en práctica la creación de relaciones entre tablas, específicamente entre estudiantes y carreras, lo que me ayudó a comprender de manera más clara el uso de llaves foráneas y la organización de la información en una base de datos relacional.
 
-También practiqué la implementación de relaciones entre tablas, en este caso entre estudiantes y carreras, lo cual me permitió comprender mejor cómo funcionan las llaves foráneas en bases de datos.
 
-Además, trabajé con Tailwind CSS para diseñar una interfaz moderna y consistente, utilizando una paleta de colores basada en tonos rojos, negros y grises.
+🔧 Oportunidades de mejora
 
----
+Para mejorar este proyecto en el futuro, se podrían considerar los siguientes aspectos:
 
-## 🚀 Áreas de mejora
-
-Algunos aspectos que podrían mejorarse en futuros proyectos son:
-
-* Paginación en las tablas
-* Buscador y filtros para registros
-* Mejorar la validación con mensajes personalizados
-* Implementar autenticación de usuarios
-* Mejorar la experiencia del usuario con animaciones
-
+Integrar paginación en las tablas para manejar grandes volúmenes de datos
+Añadir funcionalidades de búsqueda y filtrado de información
+Optimizar las validaciones mostrando mensajes más claros al usuario
+Incorporar un sistema de autenticación para mayor seguridad
+Mejorar la interfaz con animaciones que hagan la experiencia más interactiva
 ---
 
 ## 📚 Recursos útiles
@@ -224,22 +211,20 @@ Durante el desarrollo del proyecto se consultaron diversas documentaciones y rec
 * [Documentación oficial de Laravel](https://laravel.com/docs)
 * [Tailwind CSS](https://tailwindcss.com/docs)
 * [MDN Web Docs](https://developer.mozilla.org/es/)
+* Instrucciones Mra : https://cloud.aguascalientes.tecnm.mx/moodle/mod/assign/view.php?id=847345
+* Tutorial Youtube  https://www.google.com/url?sa=i&source=web&rct=j&url=https://www.youtube.com/watch?v%3D29mihvA_zEA%26t%3D137&ved=2ahUKEwj59d2fseyTAxWT78kDHY6RHMQQqYcPegYIAQgAEDc&opi=89978449&cd&psig=AOvVaw1LfhWcWJf8IjeuU0zf-nSv&ust=1776223215760000
 
 ---
 
 ## 👩‍💻 Autor
 
-* Nombre completo: Elvia Yuridia Flores Dueñas
+* Nombre completo: Paulette Montserrat Hernandez Chairez 
 * Carrera: TICS
 * Grupo: --
-* Correo institucional: [23151302@aguascalientes.tecnm.mx](mailto:23151302@aguascalientes.tecnm.mx)
+* Correo institucional: 23151207@aguascalientes.tecnm.mx
 
 ---
 
-## ✨ Reflexión final
+## Relfexion  :  El desarrollo de este proyecto me permitió comprender de manera más clara cómo funciona un sistema web completo utilizando Laravel. A lo largo de la implementación del CRUD, pude identificar la importancia de cada uno de los componentes del patrón MVC y cómo trabajan en conjunto para lograr una aplicación funcional y organizada.
 
-Este proyecto me permitió comprender de manera más clara el funcionamiento completo de un sistema CRUD utilizando Laravel. A diferencia de proyectos más simples de maquetación, aquí pude trabajar tanto en la lógica del backend como en la interfaz del usuario.
-
-Una de las partes más interesantes fue la conexión entre el controlador, los modelos y las vistas, ya que pude ver cómo fluye la información dentro de la aplicación. También disfruté trabajar con Tailwind CSS para darle un diseño más atractivo al sistema.
-
-En general, este proyecto fortaleció mis habilidades en desarrollo web y me dio una mejor comprensión del funcionamiento de aplicaciones dinámicas conectadas a una base de datos.
+Uno de los aspectos más relevantes fue darme cuenta de que no solo se trata de que el sistema funcione, sino de mantener una buena estructura en el código, ya que esto facilita su mantenimiento y escalabilidad. Además, trabajar con validaciones y formularios me ayudó a entender la importancia de controlar los datos que ingresan los usuarios.
